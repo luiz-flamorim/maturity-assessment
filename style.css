@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark)
+}
+
+:root {
+    --bright: #dbdbdb;
+    --grey: #c7c7c7;
+    --dark: #353535;
+    --colour01: #0091DA;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--dark);
+    padding: 5%
+}
+
+.dragover {
+    background: #242424;
+    transition: 0.5s;
+  }
+
+/* TEXT STYLE   - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+h1 {
+    color: var(--bright);
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 3rem;
+}
+
+/* Form style   - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#form-container {
+    display: flex;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.input-field {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 1em;
+    font-size: 1em;
+    width: 100%;
+}
+
+#subdivisions {
+    /* max-width: 10%; */
+}
+
+/* buttons - - - - - - - - - - - - - - - - - - - - - -*/
+.button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--colour01);
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.5s;
+    min-height: 3em;
+    /* width: 20%; */
+    opacity: 0.8;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+.button:active {
+    opacity: 0.5;
+}
+
+/* MAIN CONTAINER   - - - - - - - - - - - - - - - - - - - - - - */
+#reset-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+#reset {
+    width: 60%;
+    bottom: 2em;
+    display: none;
+}
+
+#wrapper {
+    background: white;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wrapper .node {
+    display: flex;
+    align-items: stretch;
+    background: var(--bright);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    min-width: 100%;
+}
+
+.node:hover {
+    opacity: 0.8;
+}
+
+
+/* NODES    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* CATEGORY TITLE   - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.category-div {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.category-title {
+    color: var(--dark);
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+/* SLIDERS  - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.maturity-div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.score {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--colour01);
+    padding-right: 0.5rem;
+    text-align: right;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 35%;
+    background: linear-gradient(90deg, var(--grey) 50%, var(--grey) 50%);
+    -webkit-transition: 0.5s;
+    transition: opacity 0.5s;
+    border-radius: 10px;
+    opacity: 0.8;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    /* background: white; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* .slider::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5)
+} */
+
+/* ICON     - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+.icon-div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left:1rem
+}
+
+.icon {
+    font-size: 2rem !important;
+    color: var(--dark);
+    cursor: grab;
+    opacity: 0.8;
+}
+
+.icon:active {
+    cursor: grabbing;
+}
+
