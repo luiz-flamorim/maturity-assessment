@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--dark)
+    /* color: var(--dark) */
 }
 
 :root {
@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: var(--bright);
+    /* background: var(--bright); */
     padding: 5%
 }
 
