@@ -170,7 +170,7 @@ function sliderBuilder(maturityDiv, subdivisions) {
         }
         currentSlider.addEventListener('mousemove', function () {
             let x = currentSlider.value
-            let colour = `linear-gradient(90deg, var(--colour01) ${x}%, var(--grey) ${x}%)`
+            let colour = `-webkit-linear-gradient(0deg, var(--colour01) ${x}%, var(--grey) ${x}%)`
             currentSlider.style.background = colour
         })
     })
