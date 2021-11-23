@@ -168,7 +168,12 @@ h1 {
     -webkit-appearance: none;
     width: 90%;
     height: 35%;
-    background: linear-gradient(90deg, #0091DA 50%, #c7c7c7 50%);
+    /* background: linear-gradient(90deg, #0091DA 50%, #c7c7c7 50%); */
+    background: -moz-linear-gradient(90deg, #0091DA 50%, #c7c7c7 50%);
+    background: -ms-linear-gradient(90deg, #0091DA 50%, #c7c7c7 50%); /* IE10 */  
+    background: -webkit-linear-gradient(90deg, #0091DA 50%, #c7c7c7 50%); /* Safari 5.1+, Chrome 10+ */  
+    background: -o-linear-gradient(90deg, #0091DA 50%, #c7c7c7 50%); /* Opera 11.10 */  
+    background: linear-gradient(90deg, #0091DA 50%, #c7c7c7 50%); /* the standard */ 
     -webkit-transition: 0.5s;
     transition: opacity 0.5s;
     border-radius: 10px;
