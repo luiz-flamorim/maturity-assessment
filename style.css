@@ -85,6 +85,7 @@ h1 {
 /* MAIN CONTAINER   - - - - - - - - - - - - - - - - - - - - - - */
 #reset-div {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -94,7 +95,7 @@ h1 {
 
 #reset {
     width: 60%;
-    bottom: 2em;
+    bottom: 12em;
     display: none;
 }
 
@@ -126,7 +127,6 @@ h1 {
 }
 
 
-/* NODES    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* CATEGORY TITLE   - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 .category-div {
     width: 20%;
@@ -166,7 +166,7 @@ h1 {
     -webkit-appearance: none;
     width: 90%;
     height: 35%;
-    background: linear-gradient(90deg, var(--grey) 50%, var(--grey) 50%);
+    background: -webkit-linear-gradient(90deg, var(--grey) 50%, var(--grey) 50%);
     -webkit-transition: 0.5s;
     transition: opacity 0.5s;
     border-radius: 10px;
@@ -189,9 +189,9 @@ h1 {
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
 }
 
-/* .slider::-webkit-slider-thumb:hover {
+.slider::-webkit-slider-thumb:hover {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5)
-} */
+}
 
 /* ICON     - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 .icon-div{
@@ -211,4 +211,3 @@ h1 {
 .icon:active {
     cursor: grabbing;
 }
-

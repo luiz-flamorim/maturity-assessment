@@ -1,13 +1,10 @@
 // TO DO
-// Add the buttons at the bottom of the page
 // export and import CSV files
 // Subcategory colours
 // Subcategory legend
 // Add new category (such the plus in the agenda)
 // Duplicate a category
 // edit categories
-//remove the reset button?
-
 
 //SortableJS setup
 const dragArea = document.querySelector('#wrapper')
@@ -22,7 +19,7 @@ new Sortable(dragArea, {
     removeOnSpill: true
 })
 
-// if a file is dragged on the body area, it will be removed
+// if an element is dragged on the body area, it will be removed
 const dropArea = document.querySelector('body')
 dropArea.addEventListener('dragover', () => {
     dropArea.classList.add('dragover')
@@ -47,17 +44,15 @@ setCategoriesButton.addEventListener('click', function () {
 
         categories = categories.value.replace(regex, ' ')
         categories = categories.split(',')
-        categories.forEach(item =>{
-            if(item == '') categories.pop(item)
-        })
-        
-        subdivisions = subdivisions.value.replace(regex, ' ')
-        subdivisions = subdivisions.split(',')
-        subdivisions.forEach(item =>{
-            if(item == '') subdivisions.pop(item)
+        categories.forEach(item => {
+            if (item == '') categories.pop(item)
         })
 
-        console.log(subdivisions)
+        subdivisions = subdivisions.value.replace(regex, ' ')
+        subdivisions = subdivisions.split(',')
+        subdivisions.forEach(item => {
+            if (item == '') subdivisions.pop(item)
+        })
 
         createAssessment(categories, subdivisions)
         addLegend(subdivisions)
@@ -65,6 +60,8 @@ setCategoriesButton.addEventListener('click', function () {
         form.style.display = "none"
         resetButton.style.display = "block"
 
+
+        console.log(categories)
         //clear the input
         let clearCategoriesField = document.getElementById('categoriesField')
         clearCategoriesField.value = ''
@@ -137,6 +134,8 @@ function createAssessment(categories, subdivisions) {
 
             sliderBuilder(maturityDiv, subdivisions)
 
+            categories.value = ' '
+            subdivisions.value = ' '
         })
     }
 }
@@ -177,6 +176,6 @@ function sliderBuilder(maturityDiv, subdivisions) {
     })
 }
 
-function addLegend(subdivisions){
-    console.log(subdivisions)
+function addLegend(subdivisions) {
+    // console.log(subdivisions)
 }
